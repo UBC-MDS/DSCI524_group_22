@@ -1,22 +1,24 @@
-# better_lr
+# lr_cd
 
-A better implementation of generalized linear regression in Python! We are going to implement the linear regression or logistic regression by state-of-the-art algorithm in numerical optimization. Our package will have three major parts, generating the data, implementing the algorithm, and visualizing the result.
+A better implementation of the linear regression in Python! We are going to implement the linear regression by coordinate descent (CD) algorithm in convex optimization. Our package will have three major parts, including: 1. data generation, 2. coordinate descent algorithm, and 3. visualization.
 
 
 - data generation function
-- algorithm function
+- coordinate descent algorithm function
 - visualization function
 
 
-statsmodels Python package have the similar functionality. But the algorithm we use may be different from the existed one. 
+Python package scikit-learn have the similar functionality. But the algorithm we use is different from the existed one. See below links for more informaton of `sklearn.linear_model.LinearRegression`.
 
-https://www.statsmodels.org/stable/index.html
+https://scikit-learn.org/stable/modules/linear_model.html#ordinary-least-squares
+
+https://github.com/scikit-learn/scikit-learn/blob/3f89022fa/sklearn/linear_model/_base.py#L534
 
 
 ## Installation
 
 ```bash
-$ pip install better_lr
+$ pip install lr_cd
 ```
 
 ## Usage
@@ -29,7 +31,15 @@ Interested in contributing? Check out the contributing guidelines. Please note t
 
 ## License
 
-`better_lr` was created by Sam Fo, Jing Wen, Andy Zhang. It is licensed under the terms of the MIT license.
+`lr_cd` was created by Sam Fo, Jing Wen, Andy Zhang. It is licensed under the terms of the MIT license.
+
+## Contributors
+
+Sam Fo for data generation
+Jing Wen for visualization
+Andy Zhang for algorithm
+
+
 
 ## Credits
 
