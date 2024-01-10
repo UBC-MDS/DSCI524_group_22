@@ -3,12 +3,13 @@
 A better implementation of the linear regression in Python! We are going to implement the linear regression by coordinate descent (CD) algorithm in convex optimization. Our package will have three major parts, including: 1. data generation, 2. coordinate descent algorithm, and 3. visualization.
 
 
+There are three major functions in this package:
 - data generation function
 - coordinate descent algorithm function
 - visualization function
 
 
-Python package scikit-learn have the similar functionality. But the algorithm we use is different from the existed one. See below links for more informaton of `sklearn.linear_model.LinearRegression`.
+Python package `scikit-learn` have the similar functionality. But the algorithm in our implementation is quite different from the existed one. See below links for more informaton of `sklearn.linear_model.LinearRegression`.
 
 https://scikit-learn.org/stable/modules/linear_model.html#ordinary-least-squares
 
@@ -23,7 +24,7 @@ $ pip install lr_cd
 
 ## Usage
 
-We can use this package to find the coefficient of linear regression or logistic regression.
+We can use this package to find the coefficients of linear regression.
 
 ## Contributing
 
@@ -35,12 +36,12 @@ Interested in contributing? Check out the contributing guidelines. Please note t
 
 ## Contributors
 
-Sam Fo for data generation
-Jing Wen for visualization
-Andy Zhang for algorithm
+- Sam Fo for data generation
+- Jing Wen for visualization
+- Andy Zhang for algorithm
 
 
 
 ## Credits
 
-`better_lr` was created with [`cookiecutter`](https://cookiecutter.readthedocs.io/en/latest/) and the `py-pkgs-cookiecutter` [template](https://github.com/py-pkgs/py-pkgs-cookiecutter).
+`lr_cd` was created with [`cookiecutter`](https://cookiecutter.readthedocs.io/en/latest/) and the `py-pkgs-cookiecutter` [template](https://github.com/py-pkgs/py-pkgs-cookiecutter).
