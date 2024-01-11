@@ -16,7 +16,7 @@ def generate_data_lr(n, theta, random_seed=123):
 
     Returns
     -------
-    An array containing the data points (X, y), where X is the randomly generated regressor values, and y is the corresponding continuous target.
+    An array that returns X, the randomly generated regressor values, and another array containing y, the corresponding continuous target.
 
     Examples
     --------
