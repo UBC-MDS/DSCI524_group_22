@@ -10,13 +10,13 @@ def generate_data_lr(n, theta, random_seed=123):
     n : integer
         The number of data points.
     theta : float
-        The true theta coefficient for the logistic regression
+        The true theta coefficient for the linear regression
     random_seed : integer
         Random seed to ensure reproducibility.
 
     Returns
     -------
-    A dataframe containing the data points (X, y), where X is the randomly generated regressor values, and y is the corresponding binary target.
+    A dataframe containing the data points (X, y), where X is the randomly generated regressor values, and y is the corresponding continuous target.
 
     Examples
     --------
