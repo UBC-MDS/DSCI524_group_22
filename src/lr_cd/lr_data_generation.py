@@ -3,7 +3,7 @@
 # date: 2024-01-10
 
 def generate_data_lr(n, theta, random_seed=123):
-    """Generate a number of data points (X, y) base on the theta coefficients.
+    """Generate a number of data points base on the theta coefficients.
 
     Parameters
     ----------
