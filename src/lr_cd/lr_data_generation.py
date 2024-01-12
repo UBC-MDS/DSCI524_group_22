@@ -16,7 +16,10 @@ def generate_data_lr(n, theta, random_seed=123):
 
     Returns
     -------
-    An array that returns X, the randomly generated regressor values, and another array containing y, the corresponding continuous target.
+    X : ndarray
+        Feature data matrix of shape (n_samples, n_features).
+    y : ndarray
+        Response data vector of shape (n_samples,).
 
     Examples
     --------
