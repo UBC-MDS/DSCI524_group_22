@@ -9,8 +9,8 @@ def generate_data_lr(n, theta, random_seed=123):
     ----------
     n : integer
         The number of data points.
-    theta : float
-        The true theta coefficient for the linear regression
+    theta : ndarray
+        The true scalar intercept and coefficient weights vector
     random_seed : integer
         Random seed to ensure reproducibility.
 
