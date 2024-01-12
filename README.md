@@ -1,15 +1,17 @@
 # lr_cd
 
-A better implementation of the linear regression in Python! We are going to implement the linear regression by coordinate descent (CD) algorithm in convex optimization. Our package will have three major parts, including: 1. data generation, 2. coordinate descent algorithm, and 3. visualization.
+A better implementation of the linear regression in Python! We are going to implement the linear regression by coordinate descent (CD) algorithm in convex optimization. Our package will have three major parts, including 1. data generation, 2. coordinate descent algorithm, and 3. visualization.
 
 
 There are three major functions in this package:
-- data generation function
-- coordinate descent algorithm function
-- visualization function
+- data generation function: this function generates many random data points based on the theta coefficients, which will later be used for model fitting.
+- coordinate descent algorithm function: this function performs coordinate descent to minimize the mean square error of linear regression and therefore outputs the optimized intercept and coefficient weights vector.
+- visualization function: this function returns a scatter plot of the observed data points overlayed with a regression with optimized weights.
 
 
-Python package `scikit-learn` have the similar functionality. But the algorithm in our implementation is quite different from the existed one. See below links for more informaton of `sklearn.linear_model.LinearRegression`.
+Python package `scikit-learn` has a similar functionality. However, we are taking a different algorithm in our implementation and we believe it will be a better implementation. LinearRegression of Scikit-learn's contains a few optimization solvers: scipy.linalg.lstsq, scipy.sparse.linalg.lsqr and scipy.optimize.nnls which rely on the singular value decomposition of feature matrix X. 
+
+See the below links for more information on `sklearn.linear_model.LinearRegression`.
 
 https://scikit-learn.org/stable/modules/linear_model.html#ordinary-least-squares
 
@@ -25,6 +27,20 @@ $ pip install lr_cd
 ## Usage
 
 We can use this package to find the coefficients of linear regression.
+
+Example usage:
+```
+>>> from lr_cd.lr_cd import coordinate_descent
+>>> model = coordinate_descent(X, y, alpha=0.01)
+```
+
+```
+model.intercept_
+0.42167642
+
+model.coef_
+array([1.88190714])
+```
 
 ## Contributing
 
