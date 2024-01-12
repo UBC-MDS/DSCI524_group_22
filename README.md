@@ -1,6 +1,8 @@
 # lr_cd
 
-A better implementation of the linear regression in Python! We are going to implement the linear regression by coordinate descent (CD) algorithm in convex optimization. Our package will have three major parts, including 1. data generation, 2. coordinate descent algorithm, and 3. visualization.
+A better implementation of the linear regression in Python! We are going to implement the linear regression by coordinate descent (CD) algorithm in convex optimization. Our package will have three major parts, including 1. data generation, 2. coordinate descent algorithm, and 3. visualization. Check below link for more information on coordinate descent (CD) algorithm.
+
+https://en.wikipedia.org/wiki/Coordinate_descent
 
 
 ## Functions
@@ -12,7 +14,7 @@ There are three major functions in this package:
 
 
 ## Existed Package
-Python package `scikit-learn` has a similar functionality. However, we are taking a different algorithm in our implementation and we believe it will be a better implementation. LinearRegression of Scikit-learn's contains a few optimization functions: `scipy.linalg.lstsq`, `scipy.sparse.linalg.lsqr` and `scipy.optimize.nnls` which rely on the singular value decomposition of feature matrix X. 
+`LinearRegression` in Python package `scikit-learn` has a similar functionality. However, we are using a different algorithm in our implementation and believe it will be a better one. `LinearRegression` of Scikit-learn's contains a few optimization functions: `scipy.linalg.lstsq`, `scipy.sparse.linalg.lsqr` and `scipy.optimize.nnls` which rely on the singular value decomposition of feature matrix X. 
 
 See the below links for more information on `sklearn.linear_model.LinearRegression`.
 
@@ -29,7 +31,7 @@ $ pip install lr_cd
 
 ## Usage
 
-We can use this package to find the coefficients of linear regression.
+We can use this package to find the intercept and coefficients of linear regression.
 
 Example usage:
 ```
