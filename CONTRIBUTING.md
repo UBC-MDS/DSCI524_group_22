@@ -1,7 +1,5 @@
 # Contributing
 
-## Authors: Sam Fo, Jing Wen, Andy Zhang
-
 Contributions are welcome, and they are greatly appreciated! Every little bit
 helps, and credit will always be given.
 
