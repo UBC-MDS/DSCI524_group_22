@@ -9,7 +9,9 @@ There are three major functions in this package:
 - visualization function: this function returns a scatter plot of the observed data points overlayed with a regression with optimized weights.
 
 
-Python package `scikit-learn` has a similar functionality. However, we are taking a different algorithm in our implementation and we believe it will be a better implementation. See the below links for more information on `sklearn.linear_model.LinearRegression`.
+Python package `scikit-learn` has a similar functionality. However, we are taking a different algorithm in our implementation and we believe it will be a better implementation. LinearRegression of Scikit-learn's contains a few optimization solvers: scipy.linalg.lstsq, scipy.sparse.linalg.lsqr and scipy.optimize.nnls which rely on the singular value decomposition of feature matrix X. 
+
+See the below links for more information on `sklearn.linear_model.LinearRegression`.
 
 https://scikit-learn.org/stable/modules/linear_model.html#ordinary-least-squares
 
