@@ -1,6 +1,6 @@
 # lr_cd
 
-A better implementation of the linear regression in Python! We are going to implement the linear regression by coordinate descent (CD) algorithm. Our package will have three major parts, including 1. data generation, 2. coordinate descent algorithm, and 3. visualization. Check below link for more information on coordinate descent (CD) algorithm.
+A better implementation of the linear regression in Python! We are going to implement the linear regression by coordinate descent (CD) algorithm. Our package will have three major parts, including 1. data generation, 2. coordinate descent algorithm, and 3. visualization. Please refer to the link below for additional details about the coordinate descent (CD) algorithm if you are unfamiliar with it.
 
 https://en.wikipedia.org/wiki/Coordinate_descent
 
@@ -14,7 +14,7 @@ There are three major functions in this package:
 
 
 ## Existed Package
-`LinearRegression` in Python package `scikit-learn` has a similar functionality. However, we use a different algorithm in the implementation and believe it will be a better one. `LinearRegression` of Scikit-learn's contains a few optimization functions: `scipy.linalg.lstsq`, `scipy.sparse.linalg.lsqr` and `scipy.optimize.nnls` which basically rely on the singular value decomposition of feature matrix X. 
+`LinearRegression` in Python package `scikit-learn` has a similar functionality. However, we use a different algorithm in the implementation and believe it will be a better one. `sklearn.linear_model.LinearRegression` contains a few optimization functions: `scipy.linalg.lstsq`, `scipy.sparse.linalg.lsqr` and `scipy.optimize.nnls` which basically rely on the singular value decomposition of feature matrix X. 
 
 See the below links for more information on `sklearn.linear_model.LinearRegression`.
 
