@@ -9,7 +9,7 @@ A better implementation of the linear regression in Python! We are going to impl
 
 There are three major functions in this package:
 - `generate_data_lr(n, theta, random_seed=123)`: this function generates many random data points based on the theta coefficients, which will later be used for model fitting.
-- `coordinate_descent(X, y, alpha, ϵ=1e-4, max_iterations=1000)`: this function performs coordinate descent to minimize the mean squared error of linear regression and therefore outputs the optimized intercept and coefficients vector.
+- `coordinate_descent(X, y, ϵ=1e-6, max_iterations=1000)`: this function performs coordinate descent to minimize the mean squared error of linear regression and therefore outputs the optimized intercept and coefficients vector.
 - `plot_lr(X, y, intercept, coef, plot_to)`: this function returns a scatter plot of the observed data points overlayed with a regression with optimized intercept and coefficients vector.
 
 
