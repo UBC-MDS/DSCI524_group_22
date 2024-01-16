@@ -2,6 +2,8 @@
 # author: Andy Zhang
 # date: 2024-01-14
 
+import numpy as np
+
 
 def coordinate_descent(X, y, ϵ=1e-6, max_iterations=1000):
     """
@@ -63,7 +65,17 @@ def coordinate_descent(X, y, ϵ=1e-6, max_iterations=1000):
             elif j>0:
                 tmp=y-np.dot(X, coef).reshape(n,1)-intercept*np.ones(n).reshape(n,1)+np.dot(X[:,j-1],coef[j-1]).reshape(n,1)
                 #coef[j-1]=np.dot(X[:,j-1],tmp)/np.dot(X[:,j-1],X[:,j-1])
-                coef[j-1]=np.divide(np.dot(X[:,j-1],tmp), np.dot(X[:,j-1],X[:,j-1]))
+                #coef[j-1]=np.divide(np.dot(X[:,j-1],tmp), np.dot(X[:,j-1],X[:,j-1]))
+                numerator = X[:, j-1]@tmp
+                denominator = X[:, j-1]@X[:, j-1]
+                
+                if denominator != 0:
+                    coef[j-1] = numerator[0] / denominator
+                else:
+                    coef[j-1] = 0
+
+
+
         
 
         iterations += 1
