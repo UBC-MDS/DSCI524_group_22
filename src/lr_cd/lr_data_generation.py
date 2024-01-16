@@ -40,7 +40,7 @@ def generate_data_lr(n, n_features, theta, noise=0.2, random_seed=123):
     if len(theta) != n_features + 1:
         raise ValueError('Number of features does not match with theta.')
 
-    X = np.random.normal(size=n * n_features).reshape(n_features, n)
+    X = np.random.random(size=n * n_features).reshape(n_features, n)
     true_intercept = theta[0]
     true_coeff = theta[1:].reshape(n_features, -1)
     noise = np.random.normal(
