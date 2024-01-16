@@ -5,7 +5,7 @@
 import numpy as np
 
 
-def generate_data_lr(n, n_features, theta, noise=1.0, random_seed=123):
+def generate_data_lr(n, n_features, theta, noise=0.2, random_seed=123):
     """Generate a number of data points base on the theta coefficients.
 
     Parameters
@@ -40,10 +40,10 @@ def generate_data_lr(n, n_features, theta, noise=1.0, random_seed=123):
     if len(theta) != n_features + 1:
         raise ValueError('Number of features does not match with theta.')
 
-    X = np.random.normal(size=n * n_features).reshape(n, n_features)
+    X = np.random.normal(size=n * n_features).reshape(n_features, n)
     true_intercept = theta[0]
-    true_coeff = theta[1:]
+    true_coeff = theta[1:].reshape(n_features, -1)
     noise = np.random.normal(
-        loc=0.0, scale=1.0, size=n * n_features).reshape(n, n_features)
-    y = X * true_coeff.reshape(n_features, -1) + true_intercept + noise
+        loc=0.0, scale=noise, size=n)
+    y = np.sum(X * true_coeff, axis=0) + true_intercept + noise
     return X, y
