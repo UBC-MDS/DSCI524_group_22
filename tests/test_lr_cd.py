@@ -5,7 +5,7 @@ import pytest
 import sys
 import os
 
-import unittest
+#import unittest
 import numpy as np
 from sklearn.linear_model import LinearRegression
 
@@ -15,10 +15,10 @@ sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
 from src.lr_cd import coordinate_descent
 
 
-
+np.random.seed(666666)
 # Test for correct return type
 def test_result():
-    np.random.seed(666666)
+    
 	X = 2 * np.random.rand(100, 5)
 	y = 4 + 3 * X[:, 0] + 2 * X[:, 1] + 1.5 * X[:, 2] + 0.5 * X[:, 3] + np.random.randn(100)
 	y = y.reshape(-1, 1)
