@@ -50,6 +50,23 @@ def coordinate_descent(X, y, ϵ=1e-6, max_iterations=1000):
     array([[1.88190714]])
     """
     
+
+    if not isinstance(X, np.ndarray):
+        raise TypeError("X should be a numpy array.")
+
+    if not isinstance(y, np.ndarray):
+        raise TypeError("y should be a numpy array.")
+
+    if X.ndim == 1:
+        X = X.reshape(-1, 1)
+
+    if y.ndim == 1:
+        y = y.reshape(-1, 1)
+
+    if X.shape[0] != y.shape[0]:
+        raise ValueError("X and y should have the same number of rows.")
+
+
     n=X.shape[0]
     coef = np.zeros(X.shape[1])
     intercept = 0.0
@@ -74,9 +91,6 @@ def coordinate_descent(X, y, ϵ=1e-6, max_iterations=1000):
                 else:
                     coef[j-1] = 0
 
-
-
-        
 
         iterations += 1
         if np.linalg.norm(coef_o-coef) < ϵ and np.linalg.norm(intercept_o-intercept) < ϵ:

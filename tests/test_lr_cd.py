@@ -19,7 +19,17 @@ y = y.reshape(-1, 1)
 
 
 
-# Test for correct return type
+
+def test_lr_cd_input_X_type_error():
+    with pytest.raises(TypeError):
+        coordinate_descent(1, y)
+
+
+def test_lr_cd_input_y_type_error():
+    with pytest.raises(TypeError):
+        coordinate_descent(X, 1)
+
+
 def test_lr_cd():
 
 	lin_reg = LinearRegression()
@@ -38,12 +48,5 @@ def test_lr_cd():
 
 	assert np.allclose(expected_result_1, calculated_result_1, atol=1e-5)
 	assert np.allclose(expected_result_2, calculated_result_2, atol=1e-5)
-
-
-
-
-
-
-
 
 
