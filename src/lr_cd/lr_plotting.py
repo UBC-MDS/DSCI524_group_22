@@ -2,12 +2,14 @@
 # author: Jing Wen
 # date: 2024-01-11
 
-def plot_lr(X, y, intercept, coef, plot_to):
+import numpy as np
+import matplotlib.pyplot as plt
+
+def plot_lr(X, y, intercept, coef):
     """Visualize the "lr_cd" linear regression model.
 
     This function takes actual data points and an estimated regression line,
-    displaying them together in a scatter plot. The plot is also
-    saved as a PNG image.
+    displaying them together in a scatter plot.
     
     Parameters
     ----------
@@ -24,9 +26,6 @@ def plot_lr(X, y, intercept, coef, plot_to):
     coef: ndarray
         Optimized coefficient weights vector.
         It will be used to calculate the estimated values using observed data 'x'.
-    
-    plot_to : str
-        A string representing the path to the directory where the plot will be saved.
 
     Returns
     -------
@@ -41,7 +40,44 @@ def plot_lr(X, y, intercept, coef, plot_to):
                     2.1345678 ,  0.12345678,  2.3456789 , -1.23456789, -0.12345678])
     >>> intercept = 0.42167642
     >>> coef = array([1.88190714])
-    >>> plot_to = "results/figures"
-    >>> plot_lr(X, y, intercept, coef, plot_to)
+    >>> plot_lr(X, y, intercept, coef)
     """
+    # Check user inputs 
+    if not isinstance(X, np.ndarray):
+        raise TypeError("X must be a numpy array.")
+    if not isinstance(y, np.ndarray):
+        raise TypeError("y must be a numpy array.")
+    if not isinstance(intercept, (float, int)):
+        raise TypeError("intercept must be a float or an integer.")
+    if not isinstance(coef, np.ndarray) or not np.issubdtype(coef.dtype, np.number):
+        raise TypeError("coef must be a numpy array of numeric types.")
+
+    # Check the dimensions of X and reshape if necessary
+    if X.ndim == 1:
+        X = X.reshape(-1, 1)
+    if y.ndim == 1:
+        y = y.reshape(-1, 1)
+
+    # Check if X and y have the same number of samples
+    if X.shape[0] != y.shape[0]:
+        raise ValueError("X and y must have the same number of samples.")
     
+    # Create a figure and axis object
+    fig, ax = plt.subplots()
+
+    # Calculate the estimated values using the intercept and coefficient
+    y_pred = intercept + np.dot(X, coef)
+
+    # Create a scatter plot of the observed data points on the axes object
+    ax.scatter(X, y, color='blue', label='Observed data')
+
+    # Plot the regression line
+    ax.plot(X, y_pred, color='red', label='Fitted line')
+
+    # Add title, labels and legends
+    ax.set_title('Linear Regression Model')
+    ax.set_xlabel('Independent variable (X)')
+    ax.set_ylabel('Dependent variable (y)')
+    ax.legend()
+
+    return fig
