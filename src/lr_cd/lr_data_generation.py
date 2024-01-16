@@ -12,7 +12,7 @@ def generate_data_lr(n, n_features, theta, noise=0.2, random_seed=123):
     ----------
     n : integer
         The number of data points.
-    n_features : ndarray
+    n_features : integer
         The number of features to generate, excluding the intercept.
     theta : ndarray
         The true scalar intercept and coefficient weights vector.
@@ -37,8 +37,17 @@ def generate_data_lr(n, n_features, theta, noise=0.2, random_seed=123):
     """
     np.random.seed(random_seed)
 
+    if not isinstance(n, int):
+        raise ValueError('Sample size (n) must be an integer.')
+
+    if not isinstance(n_features, int):
+        raise ValueError('Number of features must be an integer.')
+
     if len(theta) != n_features + 1:
         raise ValueError('Number of features does not match with theta.')
+
+    if len(theta) < 2:
+        raise ValueError('Insufficient number of elements in theta.')
 
     X = np.random.random(size=n * n_features).reshape(n_features, n)
     true_intercept = theta[0]
