@@ -5,7 +5,7 @@
 import numpy as np
 
 
-def generate_data_lr(n, n_features, theta, random_seed=123):
+def generate_data_lr(n, n_features, theta, noise=1.0, random_seed=123):
     """Generate a number of data points base on the theta coefficients.
 
     Parameters
@@ -17,6 +17,8 @@ def generate_data_lr(n, n_features, theta, random_seed=123):
     theta : ndarray
         The true scalar intercept and coefficient weights vector.
         The first element should always be the intercept.
+    noise : float
+        The standard deviation of a normal distribution added to the generated target y array as noise.
     random_seed : integer
         Random seed to ensure reproducibility.
 
@@ -41,5 +43,7 @@ def generate_data_lr(n, n_features, theta, random_seed=123):
     X = np.random.normal(size=n * n_features).reshape(n, n_features)
     true_intercept = theta[0]
     true_coeff = theta[1:]
-    y = X * true_coeff.reshape(n_features, -1) + true_intercept
+    noise = np.random.normal(
+        loc=0.0, scale=1.0, size=n * n_features).reshape(n, n_features)
+    y = X * true_coeff.reshape(n_features, -1) + true_intercept + noise
     return X, y
