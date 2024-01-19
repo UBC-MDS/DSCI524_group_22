@@ -6,7 +6,7 @@
 
 # -- Project information -----------------------------------------------------
 
-project = u"better_lr"
+project = u"lr_cd"
 copyright = u"2024, Sam Fo, Jing Wen, Andy Zhang"
 author = u"Sam Fo, Jing Wen, Andy Zhang"
 
