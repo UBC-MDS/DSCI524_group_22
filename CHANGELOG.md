@@ -4,4 +4,4 @@
 
 ## v0.1.0 (09/01/2024)
 
-- First release of `better_lr`!
+- First release of `lr_cd`!

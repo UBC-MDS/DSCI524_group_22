@@ -1,24 +1,23 @@
 # lr_cd
 
-A better implementation of the linear regression in Python! We are going to implement the linear regression by coordinate descent (CD) algorithm. Our package will have three major parts, including 1. data generation, 2. coordinate descent algorithm, and 3. visualization. Please refer to the link below for additional details about the coordinate descent (CD) algorithm if you are unfamiliar with it.
+A better implementation of the linear regression in Python! We are going to implement the linear regression by coordinate descent (CD) algorithm. Our package will have three major parts, including 1. data generation, 2. coordinate descent algorithm, and 3. visualization. Please refer to the link for additional details about the [coordinate descent (CD) algorithm](https://en.wikipedia.org/wiki/Coordinate_descent) if you are unfamiliar with it.
 
-<https://en.wikipedia.org/wiki/Coordinate_descent>
+
 
 ## Functions
 
 There are three major functions in this package:
 
 - `generate_data_lr(n, theta, random_seed=123)`: this function generates many random data points based on the theta coefficients, which will later be used for model fitting.
-- `coordinate_descent(X, y, alpha, ϵ=1e-4, max_iterations=1000)`: this function performs coordinate descent to minimize the mean squared error of linear regression and therefore outputs the optimized intercept and coefficients vector.
-- `plot_lr(X, y, intercept, coef, plot_to)`: this function returns a scatter plot of the observed data points overlayed with a regression with optimized intercept and coefficients vector.
+- `coordinate_descent(X, y, ϵ=1e-6, max_iterations=1000)`: this function performs coordinate descent to minimize the mean squared error of linear regression and therefore outputs the optimized intercept and coefficients vector.
+- `plot_lr(X, y, intercept, coef)`: this function returns a scatter plot of the observed data points overlayed with a regression with optimized intercept and coefficients vector.
+
 
 ## Python Ecosystem Context
+`LinearRegression` in Python package `scikit-learn` has a similar functionality. However, we use a different algorithm in the implementation and believe it will be a better one. `sklearn.linear_model.LinearRegression` contains a few optimization functions: `scipy.linalg.lstsq`, `scipy.sparse.linalg.lsqr` and `scipy.optimize.nnls` which basically rely on the singular value decomposition of feature matrix X. 
 
-`LinearRegression` in Python package `scikit-learn` has a similar functionality. However, we use a different algorithm in the implementation and believe it will be a better one. `sklearn.linear_model.LinearRegression` contains a few optimization functions: `scipy.linalg.lstsq`, `scipy.sparse.linalg.lsqr` and `scipy.optimize.nnls` which basically rely on the singular value decomposition of feature matrix X.
+See the links for more information on [`sklearn.linear_model.LinearRegression`](https://scikit-learn.org/stable/modules/linear_model.html#ordinary-least-squares).
 
-See the below links for more information on `sklearn.linear_model.LinearRegression`.
-
-<https://scikit-learn.org/stable/modules/linear_model.html#ordinary-least-squares>
 
 ## Installation
 
@@ -55,8 +54,8 @@ Interested in contributing? Check out the contributing guidelines. Please note t
 ## Contributors
 
 - Sam Fo for data generation
-- Jing Wen for visualization
 - Andy Zhang for algorithm
+- Jing Wen for visualization
 
 ## Credits
 

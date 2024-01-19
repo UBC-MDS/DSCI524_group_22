@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "better_lr"
+name = "lr_cd"
 version = "0.1.0"
 description = "A better generalized linear regression implementation!"
 authors = ["Sam Fo, Jing Wen, Andy Zhang"]
@@ -8,6 +8,11 @@ readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.9"
+pandas = "^2.1.4"
+matplotlib = "^3.8.2"
+scikit-learn = "^1.3.2"
+numpy = "^1.26.3"
+pytest = "^7.4.4"
 
 [tool.poetry.dev-dependencies]
 [tool.semantic_release]

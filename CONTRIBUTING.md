@@ -40,10 +40,10 @@ If you are proposing a feature:
 
 ## Get Started!
 
-Ready to contribute? Here's how to set up `better_lr` for local development.
+Ready to contribute? Here's how to set up `lr_cd` for local development.
 
-1. Download a copy of `better_lr` locally.
-2. Install `better_lr` using `poetry`:
+1. Download a copy of `lr_cd` locally.
+2. Install `lr_cd` using `poetry`:
 
     ```console
     $ poetry install
@@ -69,5 +69,5 @@ Before you submit a pull request, check that it meets these guidelines:
 
 ## Code of Conduct
 
-Please note that the `better_lr` project is released with a
+Please note that the `lr_cd` project is released with a
 Code of Conduct. By contributing to this project you agree to abide by its terms.
