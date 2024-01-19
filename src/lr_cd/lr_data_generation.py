@@ -55,4 +55,4 @@ def generate_data_lr(n, n_features, theta, noise=0.2, random_seed=123):
     noise = np.random.normal(
         loc=0.0, scale=noise, size=n)
     y = np.sum(X * true_coeff, axis=0) + true_intercept + noise
-    return X, y
+    return X.T, y.reshape(1, -1).T
