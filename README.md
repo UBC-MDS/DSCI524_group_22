@@ -62,6 +62,7 @@ Example usage:
 
 ```
 >>> from lr_cd.lr_data_generation import generate_data_lr
+>>> import numpy as np
 >>> theta = np.array([4, 3])
 >>> X, y = generate_data_lr(n=10, n_features=1, theta=theta)
 
