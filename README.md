@@ -37,11 +37,10 @@ Example usage:
 ```
 
 ```
-intercept
+>>> intercept
 0.42167642
-
-coef
-array([1.88190714])
+>>> coef
+array([[1.88190714]])
 ```
 
 ## Contributing

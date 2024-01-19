@@ -1,6 +1,6 @@
 # lr_cd.py
 # author: Andy Zhang
-# date: 2024-01-14
+# date: 2024-01-18
 
 import numpy as np
 
@@ -12,7 +12,7 @@ def coordinate_descent(X, y, ϵ=1e-6, max_iterations=1000):
     The function takes the predictor `X` and reponse `y` with initial guess for intercept
     and coefficient weights vector. 
     The function can return the optimized intercept and coefficient weights vector, and 
-    the number of iterations when algorithm stops. 
+    the number of iterations when the algorithm stops. 
 
 
     Parameters
@@ -32,7 +32,7 @@ def coordinate_descent(X, y, ϵ=1e-6, max_iterations=1000):
         Optimized intercept.
     coef : ndarray
         Optimized coefficient weights vector.
-    iteration : integer
+    iteration : int
         The number of iterations when algorithm stops.
 
     Examples
@@ -43,7 +43,7 @@ def coordinate_descent(X, y, ϵ=1e-6, max_iterations=1000):
     ...            -0.22534094, 0.23238284,  0.30280188,  1.71118274, 1.81681131])
     >>> y = array([ 1.2390575 ,  1.99411649,  2.58284984,  2.37416463,  1.82673695,
     ...             1.71754177,  1.150911  ,  1.05020832, -0.28251291, -0.40102325])
-    >>> intercept, coef, _ = coordinate_descent(X, y, alpha=0.01)
+    >>> intercept, coef, _ = coordinate_descent(X, y)
     >>> intercept
     0.42167642
     >>> coef
@@ -81,8 +81,8 @@ def coordinate_descent(X, y, ϵ=1e-6, max_iterations=1000):
                 intercept = np.mean(y - np.dot(X, coef))
             elif j>0:
                 tmp=y-np.dot(X, coef).reshape(n,1)-intercept*np.ones(n).reshape(n,1)+np.dot(X[:,j-1],coef[j-1]).reshape(n,1)
-                #coef[j-1]=np.dot(X[:,j-1],tmp)/np.dot(X[:,j-1],X[:,j-1])
-                #coef[j-1]=np.divide(np.dot(X[:,j-1],tmp), np.dot(X[:,j-1],X[:,j-1]))
+                
+                
                 numerator = X[:, j-1]@tmp
                 denominator = X[:, j-1]@X[:, j-1]
                 
