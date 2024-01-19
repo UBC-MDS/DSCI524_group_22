@@ -27,7 +27,7 @@ def generate_data_lr(n, n_features, theta, noise=0.2, random_seed=123):
     X : ndarray
         Feature data matrix of shape (n_samples, n_features).
     y : ndarray
-        Response data matrix of shape (n_samples, n_features).
+        Response data matrix of shape (n_samples, 1).
 
     Examples
     --------
