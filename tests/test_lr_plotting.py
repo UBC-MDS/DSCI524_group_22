@@ -11,7 +11,7 @@ coef_test = np.array([1])
 # test if function return the correct data type
 def test_plot_lr_returns_plot():
     result = plot_lr(X_test, y_test, intercept_test, coef_test)
-    assert isinstance(result, plt.Figure), "`plot_lr` should return an pyplot object"
+    assert isinstance(result, plt.Figure), "`plot_lr` should return an figure object"
 
 # Test handling of incorrect inputs    
 def test_plot_lr_input_X_type_error():
