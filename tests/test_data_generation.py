@@ -32,15 +32,21 @@ def test_theta_at_least_2_elements():
 
 def test_correct_result_X():
     test_X = generate_data_lr(n, n_features, theta)[0]
-    expected_X = np.array(
-        [[0.69646919, 0.28613933, 0.22685145, 0.55131477, 0.71946897]])
+    expected_X = np.array([[0.69646919],
+                           [0.28613933],
+                           [0.22685145],
+                           [0.55131477],
+                           [0.71946897]])
     assert np.allclose(test_X, expected_X)
 
 
 def test_correct_result_y():
     test_y = generate_data_lr(n, n_features, theta)[1]
-    expected_y = np.array(
-        [6.15382877, 4.84811446, 4.63971417, 6.04981399, 5.8345469])
+    expected_y = np.array([[6.15382877],
+                           [4.84811446],
+                           [4.63971417],
+                           [6.04981399],
+                           [5.8345469]])
     assert np.allclose(test_y, expected_y)
 
 
