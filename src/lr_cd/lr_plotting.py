@@ -67,16 +67,12 @@ def plot_lr(X, y, intercept, coef):
         raise TypeError("intercept must be a float or an integer.")
     if not isinstance(coef, np.ndarray) or not np.issubdtype(coef.dtype, np.number):
         raise TypeError("coef must be a numpy array of numeric types.")
-
+    
     # Check the dimensions of X and reshape if necessary
     if X.ndim == 1:
         X = X.reshape(-1, 1)
     if y.ndim == 1:
         y = y.reshape(-1, 1)
-
-    # Check if X and y have the same number of samples
-    if X.shape[0] != y.shape[0]:
-        raise ValueError("X and y must have the same number of samples.")
     
     # Create a figure and axis object
     fig, ax = plt.subplots()
