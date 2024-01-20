@@ -22,27 +22,47 @@ Make sure Miniconda or Anaconda is installed on your system
 
 ## Installation
 
-## Step 1: Clone the Repository
+### Step 1: Clone the Repository
 
 ```bash
 git clone git@github.com:UBC-MDS/lr_cd.git
 cd lr_cd  # Navigate to the cloned repository directory
 ```
 
-## Step 2: Create and Activate the Conda Environment
+### Step 2: Create and Activate the Conda Environment
 
 ```bash
 conda env create -f environment.yml  # Create Conda environment
 conda activate lr_cd  # Activate the Conda environment
 ```
+Alternative approach
+### Step 2': Create the conda environment
+```bash
+$ conda create --name lr_cd python=3.9 -y
+$ conda activate lr_cd
+```
 
-## Step 3: Install the Package Using Poetry
+### Step 3: Install the Package Using Poetry
 
 Ensure the Conda environment is activated (you should see (lr_cd) in the terminal prompt)
 
 ```bash
 poetry install  # Install the package using Poetry
 ```
+
+### Step 4: Get the coverage
+```
+pytest --cov=lr_cd
+
+pytest --cov-branch --cov=lr_cd
+
+poetry run pytest --cov-branch --cov=src
+
+poetry run pytest --cov-branch --cov=lr_cd --cov-report html
+
+```
+
+
 
 ## Troubleshooting
 
