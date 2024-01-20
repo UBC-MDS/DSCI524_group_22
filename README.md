@@ -25,7 +25,7 @@ Make sure Miniconda or Anaconda is installed on your system
 ## Step 1: Clone the Repository
 
 ```bash
-git clone <git@github.com>:UBC-MDS/lr_cd.git
+git clone git@github.com:UBC-MDS/lr_cd.git
 cd lr_cd  # Navigate to the cloned repository directory
 ```
 
