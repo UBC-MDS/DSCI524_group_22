@@ -1,0 +1,7 @@
+name: lr_cd
+channels:
+  - defaults
+dependencies:
+  - python=3.9
+  - poetry==1.7.1
+  - pytest==7.4.4

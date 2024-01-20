@@ -4,11 +4,8 @@ import pandas as pd
 import pytest
 import sys
 import os
-
-#import unittest
 import numpy as np
 from sklearn.linear_model import LinearRegression
-
 from lr_cd.lr_cd import coordinate_descent
 
 
