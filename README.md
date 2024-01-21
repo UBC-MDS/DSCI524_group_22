@@ -51,7 +51,7 @@ poetry install  # Install the package using Poetry
 ```
 
 #### Step 4: Get the coverage
-```
+```bash
 # Check line coverage
 pytest --cov=lr_cd
 
@@ -74,7 +74,7 @@ We can use this package to find the optimized intercept and coefficients vector 
 
 Example usage:
 
-```
+```python
 >>> from lr_cd.lr_data_generation import generate_data_lr
 >>> import numpy as np
 >>> theta = np.array([4, 3])
