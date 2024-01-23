@@ -18,6 +18,7 @@ pytest = "^7.4.4"
 
 [tool.poetry.group.dev.dependencies]
 jupyter = "^1.0.0"
+myst-nb = {version = "^1.0.0", python = "^3.9"}
 
 [tool.semantic_release]
 version_variable = "pyproject.toml:version" # version location
