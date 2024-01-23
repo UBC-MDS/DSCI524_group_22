@@ -22,21 +22,27 @@ Make sure Miniconda or Anaconda is installed on your system
 
 ## Installation
 
-## Step 1: Clone the Repository
+#### Step 1: Clone the Repository
 
 ```bash
-git clone <git@github.com>:UBC-MDS/lr_cd.git
+git clone git@github.com:UBC-MDS/lr_cd.git
 cd lr_cd  # Navigate to the cloned repository directory
 ```
 
-## Step 2: Create and Activate the Conda Environment
+#### Step 2: Create and Activate the Conda Environment
 
 ```bash
+# Method 1: create Conda Environment from the environment.yml file
 conda env create -f environment.yml  # Create Conda environment
 conda activate lr_cd  # Activate the Conda environment
-```
 
-## Step 3: Install the Package Using Poetry
+# Method 2: create Conda Environment 
+conda create --name lr_cd python=3.9 -y
+conda activate lr_cd
+```
+ 
+
+#### Step 3: Install the Package Using Poetry
 
 Ensure the Conda environment is activated (you should see (lr_cd) in the terminal prompt)
 
@@ -44,15 +50,23 @@ Ensure the Conda environment is activated (you should see (lr_cd) in the termina
 poetry install  # Install the package using Poetry
 ```
 
+#### Step 4: Get the coverage
+```
+# Check line coverage
+pytest --cov=lr_cd
+
+# Check branch coverage
+pytest --cov-branch --cov=lr_cd
+poetry run pytest --cov-branch --cov=src
+poetry run pytest --cov-branch --cov=lr_cd --cov-report html
+```
+
+
 ## Troubleshooting
 
-## Environment Creation Issues
+1. Environment Creation Issues: Ensure environment.yml is in the correct directory and you have the correct Conda version
 
-Ensure environment.yml is in the correct directory and you have the correct Conda version
-
-## Poetry Installation Issues
-
-Verify Poetry is correctly installed in the Conda environment and your pyproject.toml file is properly configured
+2. Poetry Installation Issues: Verify Poetry is correctly installed in the Conda environment and your pyproject.toml file is properly configured
 
 ## Usage
 
