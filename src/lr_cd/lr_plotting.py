@@ -34,10 +34,26 @@ def plot_lr(X, y, intercept, coef):
     Examples
     --------
     >>> from lr_cd.lr_plotting import plot_lr
-    >>> X = array([ 1.2390575 ,  1.99411649,  2.58284984,  2.37416463,  1.82673695,
-    ...             1.71754177,  1.150911  ,  1.05020832, -0.28251291, -0.40102325])
-    >>> y = array([ 2.3456723 ,  0.98456123,  3.1457892 ,  1.98765432,  2.9087645 ,
-                    2.1345678 ,  0.12345678,  2.3456789 , -1.23456789, -0.12345678])
+    >>> X = array([[0.69646919],
+       [0.28613933],
+       [0.22685145],
+       [0.55131477],
+       [0.71946897],
+       [0.42310646],
+       [0.9807642 ],
+       [0.68482974],
+       [0.4809319 ],
+       [0.39211752]])
+    >>> y = array([[6.34259481],
+       [4.68506992],
+       [4.54477713],
+       [5.63500251],
+       [6.45668483],
+       [5.14153898],
+       [6.8534962 ],
+       [5.96761896],
+       [5.88398172],
+       [5.61370977]])
     >>> intercept = 0.42167642
     >>> coef = array([1.88190714])
     >>> plot_lr(X, y, intercept, coef)
@@ -51,16 +67,12 @@ def plot_lr(X, y, intercept, coef):
         raise TypeError("intercept must be a float or an integer.")
     if not isinstance(coef, np.ndarray) or not np.issubdtype(coef.dtype, np.number):
         raise TypeError("coef must be a numpy array of numeric types.")
-
+    
     # Check the dimensions of X and reshape if necessary
     if X.ndim == 1:
         X = X.reshape(-1, 1)
     if y.ndim == 1:
         y = y.reshape(-1, 1)
-
-    # Check if X and y have the same number of samples
-    if X.shape[0] != y.shape[0]:
-        raise ValueError("X and y must have the same number of samples.")
     
     # Create a figure and axis object
     fig, ax = plt.subplots()
