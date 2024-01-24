@@ -1,5 +1,8 @@
 # lr_cd
 
+[![Documentation Status](https://readthedocs.org/projects/lr-cd/badge/?version=latest)](https://lr-cd.readthedocs.io/en/latest/?badge=latest)
+
+
 A better implementation of the linear regression in Python! We are going to implement the linear regression by coordinate descent (CD) algorithm. Our package will have three major parts, including 1. data generation, 2. coordinate descent algorithm, and 3. visualization. Please refer to the link for additional details about the [coordinate descent (CD) algorithm](https://en.wikipedia.org/wiki/Coordinate_descent) if you are unfamiliar with it.
 
 ## Functions
