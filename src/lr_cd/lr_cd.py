@@ -64,6 +64,7 @@ def coordinate_descent(X, y, ϵ=1e-6, max_iterations=1000):
     if X.shape[0] != y.shape[0]:
         raise ValueError("X and y should have the same number of rows.")
 
+    y=y.reshape(-1, 1)
     n = X.shape[0]
     coef = np.zeros(X.shape[1])
     intercept = 0.0
