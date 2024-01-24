@@ -6,9 +6,9 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-![version](https://img.shields.io/github/v/release/UBC-MDS/doeasyeda) 
+![version](https://img.shields.io/github/v/release/UBC-MDS/lr_cd) 
 
-![release](https://img.shields.io/github/release-date/UBC-MDS/doeasyeda)
+![release](https://img.shields.io/github/release-date/UBC-MDS/lr_cd)
 
 
 
