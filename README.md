@@ -119,7 +119,7 @@ Example usage:
 >>> plot_lr(X, y, intercept, coef)
 ```
 
-<img src="<https://github.com/UBC-MDS/lr_cd/blob/main/img/plot.png?raw=true"> height="300">
+<img src="https://github.com/UBC-MDS/lr_cd/blob/main/img/plot.png?raw=true" height="300">
 
 ## Documentations
 
