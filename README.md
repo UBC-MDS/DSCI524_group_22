@@ -44,7 +44,7 @@ There are three major functions in this package:
 
 - **Beginner-Friendly** : **lr_cd** is easy to use for beginners in Python and statistics. The well-written functions allow users to play with various simulated data and generate beautiful plots with little effort.
 
-- **Reliable-Alternative** : The coordinate descent algorithm is known for fast convergence in various convex optimization problems, making this Python package a reliable alternative. It can be easily extended to a list of statistical models like Ridge Regression and Lasso Regression.
+- **Reliable-Alternative** : The coordinate descent algorithm is known for fast convergence in various convex optimization problems, making this Python package a reliable alternative to existed packages. The package can be easily extended to a list of statistical models such as Ridge Regression and Lasso Regression.
 
 
 ## Installation
@@ -119,7 +119,7 @@ Example usage:
 >>> plot_lr(X, y, intercept, coef)
 ```
 
-<img src="https://github.com/UBC-MDS/lr_cd/blob/main/img/plot.png?raw=true" height="300">
+<img src="https://github.com/UBC-MDS/lr_cd/blob/main/img/plot.png?raw=true" height="200">
 
 ## Documentations
 
