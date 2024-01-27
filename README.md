@@ -1,12 +1,9 @@
 # lr_cd
 
+A better implementation of linear regression in Python!
+
 [![Documentation Status](https://readthedocs.org/projects/lr-cd/badge/?version=latest)](https://lr-cd.readthedocs.io/en/latest/?badge=latest) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) ![version](https://img.shields.io/github/v/release/UBC-MDS/lr_cd) ![release](https://img.shields.io/github/release-date/UBC-MDS/lr_cd)
 
-
-**lr_cd**: A superior implementation of linear regression in Python!
-
-
----------------------------------------------------------------------------------------
 
 ## Project Summary
 
@@ -17,12 +14,6 @@ Our package consists of three major components:
 2. Coordinate descent algorithm
 3. Visualization of data and the fitted linear regression line
 
-
-
-## Contributors
-
-[Andy Zhang](https://github.com/andyzhangstat) for algorithm, [Sam Fo](https://github.com/fohy24) for data generation, and
-[Jing Wen](https://github.com/Jing-19) for visualization.
 
 ## Functions
 
@@ -56,13 +47,11 @@ There are three major functions in this package:
 - **Reliable-Alternative** : The coordinate descent algorithm is known for fast convergence in various convex optimization problems, making this Python package a reliable alternative. It can be easily extended to a list of statistical models like Ridge Regression and Lasso Regression.
 
 
+## Installation
 
-
-## Prerequisites
+### Prerequisites
 
 Make sure Miniconda or Anaconda is installed on your system
-
-## Installation
 
 #### Step 1: Clone the Repository
 
@@ -103,7 +92,7 @@ poetry run pytest --cov-branch --cov=src
 poetry run pytest --cov-branch --cov=lr_cd --cov-report html
 ```
 
-## Troubleshooting
+#### Troubleshooting
 
 1. Environment Creation Issues: Ensure environment.yml is in the correct directory and you have the correct Conda version
 
@@ -137,6 +126,11 @@ Example usage:
 Online documentation is available [here]().
 
 Publishing on [TestPyPi]() and [PyPi]().
+
+## Contributors
+
+[Andy Zhang](https://github.com/andyzhangstat) for algorithm, [Sam Fo](https://github.com/fohy24) for data generation, and
+[Jing Wen](https://github.com/Jing-19) for visualization.
 
 ## Contributing
 
