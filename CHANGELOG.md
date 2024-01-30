@@ -2,6 +2,19 @@
 
 
 
+## v0.3.3 (2024-01-30)
+
+### Fix
+
+* fix: printed X and y in data_generation ([`639a318`](https://github.com/UBC-MDS/lr_cd/commit/639a3188c8b54936038d5b37be44da34a8aef300))
+
+### Unknown
+
+* Merge pull request #68 from UBC-MDS/readthedocs
+
+fix: printed X and y in data_generation ([`045c0e1`](https://github.com/UBC-MDS/lr_cd/commit/045c0e1d210261cbf46cb9b1dcfbf1ae684ae3b2))
+
+
 ## v0.3.2 (2024-01-30)
 
 ### Fix
