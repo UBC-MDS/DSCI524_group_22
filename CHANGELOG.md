@@ -2,11 +2,26 @@
 
 
 
+## v0.3.5 (2024-01-30)
+
+### Unknown
+
+* Merge pull request #72 from UBC-MDS/readme
+
+fix: Readme PyPI link ([`16038c8`](https://github.com/UBC-MDS/lr_cd/commit/16038c826b815a6e128395bb4624d0754565bfdb))
+
+* Merge pull request #70 from UBC-MDS/main
+
+fix: add the links of pypi and testpypi, add the output of intercept and coefficients ([`de07f9b`](https://github.com/UBC-MDS/lr_cd/commit/de07f9b715ede4ce622538b2ad7dda22d30b8807))
+
+
 ## v0.3.4 (2024-01-30)
 
 ### Fix
 
 * fix: added if statement to install from TestPyPI ([`9e92b78`](https://github.com/UBC-MDS/lr_cd/commit/9e92b786ca77dd6dcbeafeda8214736de17a2de3))
+
+* fix: add the links of pypi and testpypi, add the output of intercept and coefficients ([`f7c6e47`](https://github.com/UBC-MDS/lr_cd/commit/f7c6e47689d755b8269ffb3ef179a3920e744c55))
 
 ### Unknown
 
