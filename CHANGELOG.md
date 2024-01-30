@@ -2,6 +2,30 @@
 
 
 
+## v0.3.4 (2024-01-30)
+
+### Fix
+
+* fix: added if statement to install from TestPyPI ([`9e92b78`](https://github.com/UBC-MDS/lr_cd/commit/9e92b786ca77dd6dcbeafeda8214736de17a2de3))
+
+### Unknown
+
+* Updated the semantic release in toml file ([`13ee70f`](https://github.com/UBC-MDS/lr_cd/commit/13ee70fce1c3d50868dad9560156de6f6b338f06))
+
+
+## v0.3.3 (2024-01-30)
+
+### Fix
+
+* fix: printed X and y in data_generation ([`639a318`](https://github.com/UBC-MDS/lr_cd/commit/639a3188c8b54936038d5b37be44da34a8aef300))
+
+### Unknown
+
+* Merge pull request #68 from UBC-MDS/readthedocs
+
+fix: printed X and y in data_generation ([`045c0e1`](https://github.com/UBC-MDS/lr_cd/commit/045c0e1d210261cbf46cb9b1dcfbf1ae684ae3b2))
+
+
 ## v0.3.2 (2024-01-30)
 
 ### Fix
