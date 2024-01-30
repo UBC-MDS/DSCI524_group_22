@@ -2,6 +2,13 @@
 
 
 
+## v0.3.2 (2024-01-30)
+
+### Fix
+
+* fix: made the plot title more descriptive (#5) ([`df25d9d`](https://github.com/UBC-MDS/lr_cd/commit/df25d9d3d601a57c4eeb7dfd6ad73ed018c01eb2))
+
+
 ## v0.3.1 (2024-01-30)
 
 ### Fix
