@@ -87,7 +87,7 @@ def plot_lr(X, y, intercept, coef):
     ax.plot(X, y_pred, color='red', label='Fitted line')
 
     # Add title, labels and legends
-    ax.set_title('Linear Regression Model')
+    ax.set_title('Linear Regression Model Plotted by plot_lr')
     ax.set_xlabel('Independent variable (X)')
     ax.set_ylabel('Dependent variable (y)')
     ax.legend()
