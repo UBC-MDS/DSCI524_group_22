@@ -117,10 +117,20 @@ Example usage:
 >>> import numpy as np
 >>> theta = np.array([4, 3])
 >>> X, y = generate_data_lr(n=10, n_features=1, theta=theta)
+```
 
+```python
 >>> from lr_cd.lr_cd import coordinate_descent
 >>> intercept, coef, _ = coordinate_descent(X, y)
+>>> print(f"lr_cd Intercept for example: {intercept}")
+>>> print(f"lr_cd Coefficients for example: {coef}")
+```
+```
+lr_cd Intercept for example: 4.0240072117306145
+lr_cd Coefficients for example: [[3.10261496]]
+```
 
+```python
 >>> from lr_cd.lr_plotting import plot_lr
 >>> plot_lr(X, y, intercept, coef)
 ```
@@ -129,9 +139,9 @@ Example usage:
 
 ## Documentations
 
-Online documentation is available [here]().
+Online documentation is available [readthedocs](https://lr-cd.readthedocs.io/en/latest/?badge=latest).
 
-Publishing on [TestPyPi]() and [PyPi]().
+Publishing on [TestPyPi](https://test.pypi.org/project/lr-cd/) and [PyPi](https://pypi.org/project/lr-cd/).
 
 ## Contributors
 
