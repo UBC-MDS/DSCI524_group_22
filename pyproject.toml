@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "lr_cd"
-version = "0.1.0"
+version = "0.3.4"
 description = "A better generalized linear regression implementation!"
 authors = ["Sam Fo, Jing Wen, Andy Zhang"]
 license = "MIT"

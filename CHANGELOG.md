@@ -2,6 +2,17 @@
 
 
 
+## v0.3.4 (2024-01-30)
+
+### Fix
+
+* fix: added if statement to install from TestPyPI ([`9e92b78`](https://github.com/UBC-MDS/lr_cd/commit/9e92b786ca77dd6dcbeafeda8214736de17a2de3))
+
+### Unknown
+
+* Updated the semantic release in toml file ([`13ee70f`](https://github.com/UBC-MDS/lr_cd/commit/13ee70fce1c3d50868dad9560156de6f6b338f06))
+
+
 ## v0.3.3 (2024-01-30)
 
 ### Fix
