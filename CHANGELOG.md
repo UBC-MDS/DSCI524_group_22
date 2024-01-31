@@ -2,6 +2,21 @@
 
 
 
+## v0.3.9 (2024-01-31)
+
+### Fix
+
+* fix: some typos and mistakes ([`4c620e5`](https://github.com/UBC-MDS/lr_cd/commit/4c620e5ffafd0ef9da426f4b54a519a7d5c8ce59))
+
+### Unknown
+
+* Merge pull request #75 from UBC-MDS/readme
+
+feedback: Added one more badge to readme and update readme ([`d273f11`](https://github.com/UBC-MDS/lr_cd/commit/d273f11b36d3a9de6006c9046bb613afc0d217d1))
+
+* feedback: add rep badge ([`c10019a`](https://github.com/UBC-MDS/lr_cd/commit/c10019ad42472b6cf727e469fb71f9bd6e308b20))
+
+
 ## v0.3.8 (2024-01-31)
 
 ### Fix
