@@ -2,6 +2,19 @@
 
 
 
+## v0.3.8 (2024-01-31)
+
+### Fix
+
+* fix: added distinguishable figure title to plots in example file ([`14f6f2f`](https://github.com/UBC-MDS/lr_cd/commit/14f6f2fc9881bc63d3444464c387f91bce345e33))
+
+### Unknown
+
+* Merge pull request #74 from UBC-MDS/pyproject
+
+fix: added distinguishable figure title to plots in example file ([`4d15471`](https://github.com/UBC-MDS/lr_cd/commit/4d15471c52450bb3c920982fc68211c93be5c2dd))
+
+
 ## v0.3.7 (2024-01-31)
 
 ### Unknown
