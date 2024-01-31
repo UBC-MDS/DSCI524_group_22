@@ -14,25 +14,27 @@ A better implementation of linear regression in Python!
 
 ## Project Summary
 
-We implement linear regression using the coordinate descent (CD) algorithm in this Python package. For additional details about the [coordinate descent (CD) algorithm](https://en.wikipedia.org/wiki/Coordinate_descent), please refer to the link.
-
-Our package consists of three major components:
-
-1. Simulated data generation
-2. Coordinate descent algorithm
-3. Visualization of data and the fitted linear regression 
+We implement linear regression using the coordinate descent (CD) algorithm in this Python package. Here are additional details about the [coordinate descent (CD) algorithm](https://en.wikipedia.org/wiki/Coordinate_descent).
 
 ## Functions
 
-There are three major functions in this package:
+There are three functions in this package:
 
-- `generate_data_lr(n, n_features, theta, noise=0.2, random_seed=123)`: this function generates many random data points based on the theta coefficients, which will later be used for model fitting.
-- `coordinate_descent(X, y, ϵ=1e-6, max_iterations=1000)`: this function performs coordinate descent to minimize the mean squared error of linear regression and therefore outputs the optimized intercept and coefficients vector.
-- `plot_lr(X, y, intercept, coef)`: this function returns a scatter plot of the observed data points overlayed with a regression with optimized intercept and coefficients vector.
+**1. Simulated data generation:** 
+
+`generate_data_lr(n, n_features, theta, noise=0.2, random_seed=123)`: generates random data points based on the theta coefficients, which can be used for model fitting.
+
+**2. Coordinate descent algorithm:**
+
+ `coordinate_descent(X, y, ϵ=1e-6, max_iterations=1000)`: performs coordinate descent to minimize the mean squared error (MSE) of linear regression and outputs the optimized intercept and coefficients vector.
+
+**3. Visualization of data and the fitted linear regression:**
+ 
+ `plot_lr(X, y, intercept, coef)`:  returns a scatter plot of the observed data points overlayed with a regression with optimized intercept and coefficients vector.
 
 ## Common Parameters
 
-- `n` (integer): Number of data points.
+- `n` (integer): Number of data points users want to generate.
 - `n_features` (integer): Number of features to generate, excluding the intercept.
 - `theta` (ndarray): True scalar intercept and coefficient weights vector. The first element should always be the intercept.
 - `noise` (float): Standard deviation of a normal distribution added to the generated target y array as noise.
@@ -41,12 +43,12 @@ There are three major functions in this package:
 - `y` (ndarray): Response data vector, the dependent variable. Both `X` and `y` should have the same number of observations.
 - `ϵ` (float, optional): Stop the algorithm if the change in weights is smaller than the value (default is 1e-6).
 - `max_iterations` (integer, optional): Maximum number of iterations (default is 1000).
-- `intercept` (float): Optimized intercept. It will be used to calculate the estimated values using observed data `X`.
-- `coef` (ndarray): Optimized coefficient weights vector. It will be used to calculate the estimated values using observed data `X`.
+- `intercept` (float): Optimized intercept. 
+- `coef` (ndarray): Optimized coefficient weights vector. 
 
 ## Python Ecosystem Context
 
-**lr_cd** establishes itself as a valuable enhancement to the Python ecosystem. The `LinearRegression` in the Python package `scikit-learn` has similar functionality, but our implementation uses a different algorithm, which we believe is superior. [`sklearn.linear_model.LinearRegression`](https://scikit-learn.org/stable/modules/linear_model.html#ordinary-least-squares) contains a few optimization functions: `scipy.linalg.lstsq`, `scipy.sparse.linalg.lsqr`, and `scipy.optimize.nnls`, which rely on the singular value decomposition of feature matrix `X`.
+**lr_cd** establishes a valuable enhancement to the Python ecosystem. The `LinearRegression` in the Python package `scikit-learn` has similar functionality, but our implementation uses a different algorithm, which we believe is better. [`sklearn.linear_model.LinearRegression`](https://scikit-learn.org/stable/modules/linear_model.html#ordinary-least-squares) contains a few optimization functions: `scipy.linalg.lstsq`, `scipy.sparse.linalg.lsqr`, and `scipy.optimize.nnls`, which rely on the singular value decomposition of feature matrix `X`.
 
 - **Beginner-Friendly** : `lr_cd` is easy to use for beginners in Python and statistics. The well-written functions allow users to play with various simulated data and generate beautiful plots with little effort.
 
@@ -69,10 +71,10 @@ cd lr_cd  # Navigate to the cloned repository directory
 
 ```bash
 # Method 1: create Conda Environment from the environment.yml file
-conda env create -f environment.yml  # Create Conda environment
-conda activate lr_cd  # Activate the Conda environment
+conda env create -f environment.yml  
+conda activate lr_cd  
 
-# Method 2: create Conda Environment 
+# Method 2: create Conda Environment from scratch
 conda create --name lr_cd python=3.9 -y
 conda activate lr_cd
 ```
@@ -114,10 +116,8 @@ Example usage:
 >>> import numpy as np
 >>> theta = np.array([4, 3])
 >>> X, y = generate_data_lr(n=10, n_features=1, theta=theta)
->>> print('Generated X:')
->>> print(X)
->>> print('Generated y:')
->>> print(y)
+>>> print(f"Generated X: {X}")
+>>> print(f'Generated y: {y}')
 ```
 
 ```
@@ -168,12 +168,11 @@ lr_cd Coefficients for example: [[3.10261496]]
 
 Online documentation is available [readthedocs](https://lr-cd.readthedocs.io/en/latest/?badge=latest).
 
-Publishing on [TestPyPi](https://test.pypi.org/project/lr-cd/) and [PyPi](https://pypi.org/project/lr-cd/).
+Published on [TestPyPi](https://test.pypi.org/project/lr-cd/) and [PyPi](https://pypi.org/project/lr-cd/).
 
 ## Contributors
-
-[Andy Zhang](https://github.com/andyzhangstat) for algorithm, [Sam Fo](https://github.com/fohy24) for data generation, and
-[Jing Wen](https://github.com/Jing-19) for visualization.
+[Sam Fo](https://github.com/fohy24) for data generation,
+[Andy Zhang](https://github.com/andyzhangstat) for algorithm,and [Jing Wen](https://github.com/Jing-19) for visualization.
 
 ## Contributing
 
