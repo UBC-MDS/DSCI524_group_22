@@ -2,24 +2,23 @@
 
 A better implementation of linear regression in Python!
 
-![CI/CD](https://github.com/UBC-MDS/lr_cd/actions/workflows/ci-cd.yml/badge.svg) 
-[![codecov](https://codecov.io/gh/UBC-MDS/lr_cd/branch/main/graph/badge.svg)](https://codecov.io/gh/UBC-MDS/lr_cd) 
-[![Documentation Status](https://readthedocs.org/projects/lr-cd/badge/?version=latest)](https://lr-cd.readthedocs.io/en/latest/?badge=latest) 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) 
-![version](https://img.shields.io/github/v/release/UBC-MDS/lr_cd) 
-[![Python 3.9.0](https://img.shields.io/badge/python-3.9.0-blue.svg)](https://www.python.org/downloads/release/python-390/) 
+![CI/CD](https://github.com/UBC-MDS/lr_cd/actions/workflows/ci-cd.yml/badge.svg)
+[![codecov](https://codecov.io/gh/UBC-MDS/lr_cd/branch/main/graph/badge.svg)](https://codecov.io/gh/UBC-MDS/lr_cd)
+[![Documentation Status](https://readthedocs.org/projects/lr-cd/badge/?version=latest)](https://lr-cd.readthedocs.io/en/latest/?badge=latest)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+![version](https://img.shields.io/github/v/release/UBC-MDS/lr_cd)
+[![Python 3.9.0](https://img.shields.io/badge/python-3.9.0-blue.svg)](https://www.python.org/downloads/release/python-390/)
 ![release](https://img.shields.io/github/release-date/UBC-MDS/lr_cd)
-
 
 ## Project Summary
 
 We implement linear regression using the coordinate descent (CD) algorithm in this Python package. For additional details about the [coordinate descent (CD) algorithm](https://en.wikipedia.org/wiki/Coordinate_descent), please refer to the link.
 
-Our package consists of three major components: 
+Our package consists of three major components:
+
 1. Simulated data generation
 2. Coordinate descent algorithm
 3. Visualization of data and the fitted linear regression line
-
 
 ## Functions
 
@@ -45,13 +44,11 @@ There are three major functions in this package:
 
 ## Python Ecosystem Context
 
-
 **lr_cd** establishes itself as a valuable enhancement to the Python ecosystem. The `LinearRegression` in the Python package `scikit-learn` has similar functionality, but our implementation uses a different algorithm, which we believe is superior. [`sklearn.linear_model.LinearRegression`](https://scikit-learn.org/stable/modules/linear_model.html#ordinary-least-squares) contains a few optimization functions: `scipy.linalg.lstsq`, `scipy.sparse.linalg.lsqr`, and `scipy.optimize.nnls`, which rely on the singular value decomposition of feature matrix `X`.
 
 - **Beginner-Friendly** : `lr_cd` is easy to use for beginners in Python and statistics. The well-written functions allow users to play with various simulated data and generate beautiful plots with little effort.
 
 - **Reliable-Alternative** : The coordinate descent algorithm is known for fast convergence in various convex optimization problems, making this Python package a reliable alternative to existed packages. The package can be easily extended to a list of statistical models such as Ridge Regression and Lasso Regression.
-
 
 ## Installation
 
@@ -106,9 +103,7 @@ poetry run pytest --cov-branch --cov=lr_cd --cov-report html
 
 ## Usage
 
-
 Use this package to find the optimized intercept and coefficients vector of linear regression. In the following example, we generate a simulated data set with a feature matrix and response first. By the coordinate descent algorithm, we obtain the optimized intercept and coefficients. Finally, we visualize both the simulated data and fitted line in one figure.
-
 
 Example usage:
 
@@ -117,10 +112,50 @@ Example usage:
 >>> import numpy as np
 >>> theta = np.array([4, 3])
 >>> X, y = generate_data_lr(n=10, n_features=1, theta=theta)
+>>> print('Generated X:')
+>>> print(X)
+>>> print('Generated y:')
+>>> print(y)
+```
 
+```
+Generated X:
+[[0.69646919]
+ [0.28613933]
+ [0.22685145]
+ [0.55131477]
+ [0.71946897]
+ [0.42310646]
+ [0.9807642 ]
+ [0.68482974]
+ [0.4809319 ]
+ [0.39211752]]
+Generated y:
+[[6.34259481]
+ [4.68506992]
+ [4.54477713]
+ [5.63500251]
+ [6.45668483]
+ [5.14153898]
+ [6.8534962 ]
+ [5.96761896]
+ [5.88398172]
+ [5.61370977]]
+```
+
+```python
 >>> from lr_cd.lr_cd import coordinate_descent
 >>> intercept, coef, _ = coordinate_descent(X, y)
+>>> print(f"lr_cd Intercept for example: {intercept}")
+>>> print(f"lr_cd Coefficients for example: {coef}")
+```
 
+```
+lr_cd Intercept for example: 4.0240072117306145
+lr_cd Coefficients for example: [[3.10261496]]
+```
+
+```python
 >>> from lr_cd.lr_plotting import plot_lr
 >>> plot_lr(X, y, intercept, coef)
 ```
@@ -129,9 +164,9 @@ Example usage:
 
 ## Documentations
 
-Online documentation is available [here]().
+Online documentation is available [readthedocs](https://lr-cd.readthedocs.io/en/latest/?badge=latest).
 
-Publishing on [TestPyPi]() and [PyPi]().
+Publishing on [TestPyPi](https://test.pypi.org/project/lr-cd/) and [PyPi](https://pypi.org/project/lr-cd/).
 
 ## Contributors
 
