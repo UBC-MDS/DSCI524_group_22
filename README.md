@@ -9,6 +9,8 @@ A better implementation of linear regression in Python!
 ![version](https://img.shields.io/github/v/release/UBC-MDS/lr_cd)
 [![Python 3.9.0](https://img.shields.io/badge/python-3.9.0-blue.svg)](https://www.python.org/downloads/release/python-390/)
 ![release](https://img.shields.io/github/release-date/UBC-MDS/lr_cd)
+[![Project Status: Active – The project has reached a stable, usable state and is being actively developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
+
 
 ## Project Summary
 
@@ -18,7 +20,7 @@ Our package consists of three major components:
 
 1. Simulated data generation
 2. Coordinate descent algorithm
-3. Visualization of data and the fitted linear regression line
+3. Visualization of data and the fitted linear regression 
 
 ## Functions
 
@@ -38,7 +40,7 @@ There are three major functions in this package:
 - `X` (ndarray): Feature data matrix, the independent variable.
 - `y` (ndarray): Response data vector, the dependent variable. Both `X` and `y` should have the same number of observations.
 - `ϵ` (float, optional): Stop the algorithm if the change in weights is smaller than the value (default is 1e-6).
-- `max_iterations` (int, optional): Maximum number of iterations (default is 1000).
+- `max_iterations` (integer, optional): Maximum number of iterations (default is 1000).
 - `intercept` (float): Optimized intercept. It will be used to calculate the estimated values using observed data `X`.
 - `coef` (ndarray): Optimized coefficient weights vector. It will be used to calculate the estimated values using observed data `X`.
 
@@ -48,7 +50,7 @@ There are three major functions in this package:
 
 - **Beginner-Friendly** : `lr_cd` is easy to use for beginners in Python and statistics. The well-written functions allow users to play with various simulated data and generate beautiful plots with little effort.
 
-- **Reliable-Alternative** : The coordinate descent algorithm is known for fast convergence in various convex optimization problems, making this Python package a reliable alternative to existed packages. The package can be easily extended to a list of statistical models such as Ridge Regression and Lasso Regression.
+- **Reliable-Alternative** : The coordinate descent algorithm is known for fast convergence in various convex optimization problems, making this Python package a reliable alternative to existed packages. Current package can be easily extended to a list of statistical models such as Ridge Regression and Lasso Regression.
 
 ## Installation
 
