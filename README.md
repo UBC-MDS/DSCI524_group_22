@@ -116,6 +116,9 @@ Example usage:
 >>> print(X)
 >>> print('Generated y:')
 >>> print(y)
+```
+
+```
 Generated X:
 [[0.69646919]
  [0.28613933]
