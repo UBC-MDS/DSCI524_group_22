@@ -2,6 +2,21 @@
 
 
 
+## v0.3.6 (2024-01-31)
+
+### Fix
+
+* fix: print X y ([`52727f9`](https://github.com/UBC-MDS/lr_cd/commit/52727f9eb5ea87de002b9b7de73a332b3c651c66))
+
+* fix: readme print X and y for generate_data_lr ([`96026a1`](https://github.com/UBC-MDS/lr_cd/commit/96026a1cb4706751b110d755d03af9c4c965d5b9))
+
+### Unknown
+
+* Merge pull request #73 from UBC-MDS/readme
+
+fix: readme print X and y for generate_data_lr ([`87e171f`](https://github.com/UBC-MDS/lr_cd/commit/87e171f0fba48b370d3a1c44df3aa92771a99e7c))
+
+
 ## v0.3.5 (2024-01-30)
 
 ### Unknown
