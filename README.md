@@ -9,6 +9,8 @@ A better implementation of linear regression in Python!
 ![version](https://img.shields.io/github/v/release/UBC-MDS/lr_cd)
 [![Python 3.9.0](https://img.shields.io/badge/python-3.9.0-blue.svg)](https://www.python.org/downloads/release/python-390/)
 ![release](https://img.shields.io/github/release-date/UBC-MDS/lr_cd)
+[![Project Status: Active – The project has reached a stable, usable state and is being actively developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
+
 
 ## Project Summary
 
