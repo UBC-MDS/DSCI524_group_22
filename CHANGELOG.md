@@ -2,6 +2,17 @@
 
 
 
+## v0.3.7 (2024-01-31)
+
+### Unknown
+
+* Merge pull request #71 from UBC-MDS/pyproject
+
+fix: updated description in pyproject.toml ([`241c628`](https://github.com/UBC-MDS/lr_cd/commit/241c628b396888633cebbd43da108879268d2b87))
+
+* Merge branch &#39;main&#39; into pyproject ([`d864b96`](https://github.com/UBC-MDS/lr_cd/commit/d864b969b43da3963e051b77e04fc3a52b1efc51))
+
+
 ## v0.3.6 (2024-01-31)
 
 ### Fix
@@ -11,6 +22,8 @@
 * fix: readme print X and y for generate_data_lr ([`96026a1`](https://github.com/UBC-MDS/lr_cd/commit/96026a1cb4706751b110d755d03af9c4c965d5b9))
 
 ### Unknown
+
+* Merge branch &#39;main&#39; of https://github.com/UBC-MDS/DSCI524_group_22 into pyproject ([`b15141b`](https://github.com/UBC-MDS/lr_cd/commit/b15141b1d7d390d93a160b64ffd73bb1e4461fff))
 
 * Merge pull request #73 from UBC-MDS/readme
 
@@ -37,6 +50,8 @@ fix: add the links of pypi and testpypi, add the output of intercept and coeffic
 * fix: added if statement to install from TestPyPI ([`9e92b78`](https://github.com/UBC-MDS/lr_cd/commit/9e92b786ca77dd6dcbeafeda8214736de17a2de3))
 
 * fix: add the links of pypi and testpypi, add the output of intercept and coefficients ([`f7c6e47`](https://github.com/UBC-MDS/lr_cd/commit/f7c6e47689d755b8269ffb3ef179a3920e744c55))
+
+* fix: updated description in pyproject.toml ([`b6b4599`](https://github.com/UBC-MDS/lr_cd/commit/b6b4599e7c4141230fee1e78f59a69664284c479))
 
 ### Unknown
 
