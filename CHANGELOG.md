@@ -2,6 +2,19 @@
 
 
 
+## v0.3.10 (2024-02-01)
+
+### Fix
+
+* fix: format the readme based on reviewers&#39; comments ([`79e46ff`](https://github.com/UBC-MDS/lr_cd/commit/79e46ff0ce0e8cc40deb75817f5c0729d2c92a3b))
+
+### Unknown
+
+* Merge pull request #76 from UBC-MDS/readme
+
+fix: format the readme based on reviewers&#39; comments ([`d66c1b3`](https://github.com/UBC-MDS/lr_cd/commit/d66c1b3bba15259b46f8e4ff8a0e3514e679ef8b))
+
+
 ## v0.3.9 (2024-01-31)
 
 ### Fix

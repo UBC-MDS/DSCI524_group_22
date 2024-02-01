@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "lr_cd"
-version = "0.3.9"
+version = "0.3.10"
 description = "A better implementation of linear regression in Python!"
 authors = ["Sam Fo, Jing Wen, Andy Zhang"]
 license = "MIT"
